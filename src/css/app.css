@@ -1,0 +1,432 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Font Awesome Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    display: block;
+  }
+
+  .main-content::-webkit-scrollbar {
+    display: block;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #888; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: goldenrod; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: gold; 
+  }
+
+header {
+    width: 100%;
+    position: fixed;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    max-height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff5733; /* Change to your desired hover color */
+}
+
+.buttons button {
+    padding: 10px 40px;
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login {
+    background-color: #ff5733; /* Change to your desired button color */
+    color: #fff;
+}
+
+.login:hover {
+    background-color: #e6491d; /* Change to your desired hover color */
+}
+
+.register {
+    border: 2px solid #888;
+    background-color: #333;
+    color: #fff;
+}
+
+.register:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    overflow-y: scroll;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #888;
+}
+
+.left-sidebar,
+.right-sidebar {
+    width: 16%;
+    padding: 10px;
+    color: #fff;
+    background-color: #333;
+    box-sizing: border-box;
+}
+
+
+.main-content {
+    width: 64%;
+    flex-grow: 1;
+    padding: 10px;
+    margin-top: 3.5rem;
+    margin-right: 2.5rem;
+    background-color: #333;
+    background: rgba(255, 255, 255, 0.2); /* Adjust opacity as needed */
+    backdrop-filter: blur(10px); /* Adjust the blur amount */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-sidebar,
+    .right-sidebar,
+    .main-content {
+        width: 100%;
+    }
+}
+
+.sidebar {
+    width: 225px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 4rem;
+    padding-top: 10px;
+    left: 0;
+    transition: left 0.3s ease;
+    overflow-y: scroll;
+}
+
+.right-sidebar .sidebar_2nd {
+    width: 225px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 4rem;
+    padding-top: 10px;
+    right: 0;
+    transition: left 0.3s ease;
+}
+
+.search-bar {
+    padding: 10px;
+    background-color: #444;
+}
+
+.search-bar input[type="text"] {
+    width: 70%;
+    padding: 8px;
+    border: none;
+    background-color: #444;
+    color: goldenrod;
+    outline: none;
+}
+
+.search-bar button {
+    background-color: #444;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-links li {
+    padding: 15px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+}
+
+.sidebar-links a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.sidebar-links a:hover {
+    color: #ff5733; /* Change to your desired hover color */
+}
+
+.sidebar-links i {
+    color: goldenrod;
+    margin-right: 10px;
+}
+
+.sidebar-links object {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.sidebar-links img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.slideshow-container {
+    max-width: 800px;
+    max-height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+}
+
+.sidebar_2nd {
+    width: 300px;
+    padding: 20px;
+    /* Add sidebar background, border, or other styles here */
+}
+
+.banner img,
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #444;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add card-specific styles here */
+}
+
+.card-content {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.main_elements {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
+
+.bet-card {
+    width: 100%;
+    max-height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    backdrop-filter: blur(10px); /* Adjust the blur amount */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    padding-bottom: 6px;
+    border-radius: 4px;
+    border-top: 2px solid goldenrod;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.bet-card div {
+    border: 1px solid #444;
+    border-top: none;
+    border-bottom: none;
+    padding: 4px;
+}
+
+.bet-card div:first-child {
+    width: 6%;
+}
+
+.bet-card div:nth-child(2) {
+    width: 16%;
+}
+
+.bet-card div:nth-child(3) {
+    width: 20%;
+}
+
+.bet-card div:nth-child(4) {
+    width: 20%;
+}
+
+.bet-card div:nth-child(5) {
+    width: 20%;
+}
+
+.bet-card div:last-child {
+    width: 8%;
+    text-align: center;
+}
+
+.bet-card div:nth-child(3):hover, .bet-card div:nth-child(4):hover, .bet-card div:nth-child(5):hover {
+    background-color: #333;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.score {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    padding-left: 12px;
+}
+
+.bet-card:hover {
+    transform: scale(1.02);
+}
+
+.bet_label, .odds {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 56px;
+}
+
+.event {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.team {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.time {
+    font-size: 14px;
+    line-height: 56px;
+    padding: 4px;
+    text-align: center;
+    color: #999;
+}
+
+.all_market {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.bet-options {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+
+.bet-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.odds {
+    float: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: yellow;
+}
+
+.bet-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
